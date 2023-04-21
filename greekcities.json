@@ -1,4 +1,6 @@
-[
+{
+"cities": [
+    [
     {
       "name": "Thessaloniki",
       "distance": 507
@@ -78,6 +80,6 @@
     {
       "name": "Karditsa",
       "distance": 300
-    }
-  
-]
+}
+]]
+}
