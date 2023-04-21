@@ -1,0 +1,84 @@
+{
+  "cities": [
+    {
+      "name": "Thessaloniki",
+      "distance": 507
+    },
+    {
+      "name": "Patras",
+      "distance": 215
+    },
+    {
+      "name": "Heraklion",
+      "distance": 341
+    },
+    {
+      "name": "Larissa",
+      "distance": 355
+    },
+    {
+      "name": "Volos",
+      "distance": 326
+    },
+    {
+      "name": "Ioannina",
+      "distance": 445
+    },
+    {
+      "name": "Kavala",
+      "distance": 663
+    },
+    {
+      "name": "Chania",
+      "distance": 146
+    },
+    {
+      "name": "Chalcis",
+      "distance": 79
+    },
+    {
+      "name": "Sparta",
+      "distance": 162
+    },
+    {
+      "name": "Mytilene",
+      "distance": 304
+    },
+    {
+      "name": "Corfu",
+      "distance": 420
+    },
+    {
+      "name": "Tripoli",
+      "distance": 155
+    },
+    {
+      "name": "Kalamata",
+      "distance": 240
+    },
+    {
+      "name": "Serres",
+      "distance": 617
+    },
+    {
+      "name": "Alexandroupoli",
+      "distance": 837
+    },
+    {
+      "name": "Amfissa",
+      "distance": 158
+    },
+    {
+      "name": "Grevena",
+      "distance": 400
+    },
+    {
+      "name": "Pyrgos",
+      "distance": 303
+    },
+    {
+      "name": "Karditsa",
+      "distance": 300
+    }
+  ]
+}
