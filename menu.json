@@ -13,7 +13,79 @@
           "imageURL": "https://mysandbox.com/images/fredo_espresso"
         },
         {
+          "id": 38,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 39,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 40,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 41,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 37,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 36,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 35,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
           "id": 3,
+          "name": "Filter Coffe",
+          "price": 3.20,
+          "currency": "EUR",
+          "description": "French coffee, hot drink",
+          "imageURL": "https://mysandbox.com/images/filter_coffee"
+        },
+        {
+          "id": 33,
+          "name": "Filter Coffe",
+          "price": 3.20,
+          "currency": "EUR",
+          "description": "French coffee, hot drink",
+          "imageURL": "https://mysandbox.com/images/filter_coffee"
+        },
+        {
+          "id": 34,
           "name": "Filter Coffe",
           "price": 3.20,
           "currency": "EUR",
