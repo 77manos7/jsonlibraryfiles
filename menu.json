@@ -1,0 +1,176 @@
+{
+  "categories": [
+    {
+      "name": "Coffee",
+      "description": "Καφεδάκι για όλες τις ορέξεις",
+      "products": [
+        {
+          "id": 1,
+          "name": "Freddo Espresso",
+          "price": 3.40,
+          "currency": "EUR",
+          "description": "Arabica, caramel flavor",
+          "imageURL": "https://mysandbox.com/images/fredo_espresso"
+        },
+        {
+          "id": 3,
+          "name": "Filter Coffe",
+          "price": 3.20,
+          "currency": "EUR",
+          "description": "French coffee, hot drink",
+          "imageURL": "https://mysandbox.com/images/filter_coffee"
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches & Burgers",
+      "description": "Σαντουιτσακι και μπεργκερακι για να γεμιζει η κοιλιτσα",
+      "products": [
+        {
+          "id": 5,
+          "name": "Simple Toast",
+          "price": 3.50,
+          "currency": "EUR",
+          "description": "Cheddar cheese, bacon",
+          "imageURL": "https://mysandbox.com/images/simple_toast"
+        },
+        {
+          "id": 6,
+          "name": "Premium Sandwich",
+          "price": 4.50,
+          "currency": "EUR",
+          "description": "Graviera, cheese, salami aeros",
+          "imageURL": "https://mysandbox.com/images/premium_sandwich"
+        },
+        {
+          "id": 8,
+          "name": "Jack Daniels' Burger",
+          "price": 6.50,
+          "currency": "EUR",
+          "description": "Cheddar cheese, carameled onions, beef meat, hot sauce",
+          "imageURL": "https://mysandbox.com/images/jack_daniels_burger"
+        }
+      ]
+    },
+    {
+      "name": "Souvlakia",
+      "description": "Σουβλακακι για την ορεξη",
+      "products": [
+        {
+          "id": 10,
+          "name": "Pita Giros Xoirino Apola",
+          "price": 2.50,
+          "currency": "EUR",
+          "description": "Patates, tzatziki, ntomata, kremmydi",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+        },
+        {
+          "id": 11,
+          "name": "Pita Giros Kotopoulo Apola",
+          "price": 2.60,
+          "currency": "EUR",
+          "description": "Patates, sauce mayo, ntomata, marouli",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+        },
+        {
+          "id": 12,
+          "name": "Kalamaki kotopoulo",
+          "price": 1.90,
+          "currency": "EUR",
+          "description": "Kalamaki kotopoulo, pita, patates",
+          "imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+        }
+      ]
+    },
+    {
+      "name": "Crepes",
+      "description": "Κρεπες για τη λιγουρα",
+      "products": [
+        {
+          "id": 10,
+          "name": "Pita Giros Xoirino Apola",
+          "price": 2.50,
+          "currency": "EUR",
+          "description": "Patates, tzatziki, ntomata, kremmydi",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+        },
+        {
+          "id": 11,
+          "name": "Pita Giros Kotopoulo Apola",
+          "price": 2.60,
+          "currency": "EUR",
+          "description": "Patates, sauce mayo, ntomata, marouli",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+        },
+        {
+          "id": 12,
+          "name": "Kalamaki kotopoulo",
+          "price": 1.90,
+          "currency": "EUR",
+          "description": "Kalamaki kotopoulo, pita, patates",
+          "imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+        }
+      ]
+    },
+    {
+      "name": "Προφυλακτικα",
+      "description": "Προφυλαξη για ολα τα μεγεθη",
+      "products": [
+        {
+          "id": 10,
+          "name": "Pita Giros Xoirino Apola",
+          "price": 2.50,
+          "currency": "EUR",
+          "description": "Patates, tzatziki, ntomata, kremmydi",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+        },
+        {
+          "id": 11,
+          "name": "Pita Giros Kotopoulo Apola",
+          "price": 2.60,
+          "currency": "EUR",
+          "description": "Patates, sauce mayo, ntomata, marouli",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+        },
+        {
+          "id": 12,
+          "name": "Kalamaki kotopoulo",
+          "price": 1.90,
+          "currency": "EUR",
+          "description": "Kalamaki kotopoulo, pita, patates",
+          "imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+        }
+      ]
+    },
+    {
+      "name": "Waffles",
+      "description": "Βαφλες για τη λιγοτερη λιγουρα",
+      "products": [
+        {
+          "id": 10,
+          "name": "Pita Giros Xoirino Apola",
+          "price": 2.50,
+          "currency": "EUR",
+          "description": "Patates, tzatziki, ntomata, kremmydi",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_xoirino"
+        },
+        {
+          "id": 11,
+          "name": "Pita Giros Kotopoulo Apola",
+          "price": 2.60,
+          "currency": "EUR",
+          "description": "Patates, sauce mayo, ntomata, marouli",
+          "imageURL": "https://mysandbox.com/images/pita_gyros_kotopoulo"
+        },
+        {
+          "id": 12,
+          "name": "Kalamaki kotopoulo",
+          "price": 1.90,
+          "currency": "EUR",
+          "description": "Kalamaki kotopoulo, pita, patates",
+          "imageURL": "https://mysandbox.com/images/kalamaki_kotopoulo"
+        }
+      ]
+    }
+  ]
+}
