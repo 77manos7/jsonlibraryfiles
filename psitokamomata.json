@@ -1,0 +1,756 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Meat",
+      "description": "beef, chicken, pork",
+      "products": [
+        {
+          "id": 1,
+          "name": "Grass-fed Beef",
+          "price": 14.99,
+          "currency": "EUR",
+          "description": "Lean and flavorful grass-fed beef, perfect for grilling or roasting.",
+          "imageURL": "https://example.com/images/grass-fed-beef.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Organic Chicken Breast",
+          "price": 9.99,
+          "currency": "EUR",
+          "description": "Tender and juicy organic chicken breast, great for salads and stir-fries.",
+          "imageURL": "https://example.com/images/organic-chicken-breast.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Pork Tenderloin",
+          "price": 12.99,
+          "currency": "EUR",
+          "description": "Flavorful and easy-to-cook pork tenderloin, perfect for weeknight dinners.",
+          "imageURL": "https://example.com/images/pork-tenderloin.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Ground Turkey",
+          "price": 8.99,
+          "currency": "EUR",
+          "description": "Lean and versatile ground turkey, great for making burgers and meatballs.",
+          "imageURL": "https://example.com/images/ground-turkey.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Lamb Chops",
+          "price": 19.99,
+          "currency": "EUR",
+          "description": "Tender and flavorful lamb chops, perfect for special occasions.",
+          "imageURL": "https://example.com/images/lamb-chops.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Seafood",
+      "description": "fish, shrimp, crab",
+      "products": [
+        {
+          "id": 6,
+          "name": "Wild-Caught Salmon",
+          "price": 16.99,
+          "currency": "EUR",
+          "description": "Sustainably sourced wild-caught salmon, rich in omega-3 fatty acids.",
+          "imageURL": "https://example.com/images/wild-salmon.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Jumbo Shrimp",
+          "price": 22.99,
+          "currency": "EUR",
+          "description": "Juicy and plump jumbo shrimp, perfect for grilling or sautéing.",
+          "imageURL": "https://example.com/images/jumbo-shrimp.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Crab Legs",
+          "price": 29.99,
+          "currency": "EUR",
+          "description": "Sweet and succulent crab legs, a true seafood delicacy.",
+          "imageURL": "https://example.com/images/crab-legs.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Scallops",
+          "price": 18.99,
+          "currency": "EUR",
+          "description": "Tender and flavorful scallops, great for searing or grilling.",
+          "imageURL": "https://example.com/images/scallops.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Tuna Steak",
+          "price": 24.99,
+          "currency": "EUR",
+          "description": "Fresh and meaty tuna steak, perfect for searing or grilling.",
+          "imageURL": "https://example.com/images/tuna-steak.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Dairy",
+      "description": "milk, cheese, yogurt",
+      "products": [
+        {
+          "id": 11,
+          "name": "Organic Whole Milk",
+          "price": 3.49,
+          "currency": "EUR",
+          "description": "Rich and creamy organic whole milk, perfect for making lattes and smoothies.",
+          "imageURL": "https://example.com/images/organic-whole-milk.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Sharp Cheddar Cheese",
+          "price": 6.99,
+          "currency": "EUR",
+          "description": "Sharp and tangy cheddar cheese, great for snacking and cooking.",
+          "imageURL": "https://example.com/images/cheddar-cheese.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Greek Yogurt",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Thick and creamy Greek yogurt, perfect for breakfast and dessert.",
+          "imageURL": "https://example.com/images/greek-yogurt.jpg"
+        },
+        {
+          "id": 14,
+          "name": "Fresh Mozzarella",
+          "price": 5.99,
+          "currency": "EUR",
+          "description": "Soft and creamy fresh mozzarella cheese, great for salads and pizzas.",
+          "imageURL": "https://example.com/images/fresh-mozzarella.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Whipped Cream",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Light and fluffy whipped cream, perfect for topping desserts.",
+          "imageURL": "https://example.com/images/whipped-cream.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Fruits",
+      "description": "apples, bananas, oranges",
+      "products": [
+        {
+          "id": 16,
+          "name": "Granny Smith Apples",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Tart and crispy Granny Smith apples, great for snacking and baking.",
+          "imageURL": "https://example.com/images/granny-smith-apples.jpg"
+        },
+        {
+          "id": 17,
+          "name": "Cavendish Bananas",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Sweet and ripe Cavendish bananas, perfect for smoothies and baking.",
+          "imageURL": "https://example.com/images/cavendish-bananas.jpg"
+        },
+        {
+          "id": 18,
+          "name": "Navel Oranges",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Juicy and sweet navel oranges, great for juicing and snacking.",
+          "imageURL": "https://example.com/images/navel-oranges.jpg"
+        },
+        {
+          "id": 19,
+          "name": "Strawberries",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Fresh and plump strawberries, perfect for salads and desserts.",
+          "imageURL": "https://example.com/images/strawberries.jpg"
+        },
+        {
+          "id": 20,
+          "name": "Pineapple",
+          "price": 6.99,
+          "currency": "EUR",
+          "description": "Sweet and juicy pineapple, great for snacking and grilling.",
+          "imageURL": "https://example.com/images/pineapple.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Vegetables",
+      "description": "carrots, broccoli, potatoes",
+      "products": [
+        {
+          "id": 21,
+          "name": "Baby Carrots",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Sweet and crunchy baby carrots, great for snacking and salads.",
+          "imageURL": "https://example.com/images/baby-carrots.jpg"
+        },
+        {
+          "id": 22,
+          "name": "Broccoli",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Nutritious and delicious broccoli florets, great for roasting and stir-frying.",
+          "imageURL": "https://example.com/images/broccoli.jpg"
+        },
+        {
+          "id": 23,
+          "name": "Potatoes",
+          "price": 1.49,
+          "currency": "EUR",
+          "description": "Versatile and tasty potatoes, perfect for mashing, frying, and roasting.",
+          "imageURL": "https://example.com/images/potatoes.jpg"
+        },
+        {
+          "id": 24,
+          "name": "Spinach",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Nutritious and flavorful spinach leaves, great for salads and smoothies.",
+          "imageURL": "https://example.com/images/spinach.jpg"
+        },
+        {
+          "id": 25,
+          "name": "Bell Peppers",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Colorful and sweet bell peppers, great for grilling and stuffing.",
+          "imageURL": "https://example.com/images/bell-peppers.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Grains",
+      "description": "rice, quinoa, oats",
+      "products": [
+        {
+          "id": 26,
+          "name": "Basmati Rice",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Fragrant and fluffy basmati rice, great for curries and pilafs.",
+          "imageURL": "https://example.com/images/basmati-rice.jpg"
+        },
+        {
+          "id": 27,
+          "name": "Quinoa",
+          "price": 6.99,
+          "currency": "EUR",
+          "description": "Nutritious and versatile quinoa, perfect for salads and stir-fries.",
+          "imageURL": "https://example.com/images/quinoa.jpg"
+        },
+        {
+          "id": 28,
+          "name": "Steel-Cut Oats",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Hearty and filling steel-cut oats, great for breakfast and baking.",
+          "imageURL": "https://example.com/images/steel-cut-oats.jpg"
+        },
+        {
+          "id": 29,
+          "name": "Buckwheat",
+          "price": 5.99,
+          "currency": "EUR",
+          "description": "Nutty and nutritious buckwheat groats, great for salads and porridge.",
+          "imageURL": "https://example.com/images/buckwheat.jpg"
+        },
+        {
+          "id": 30,
+          "name": "Barley",
+          "price": 3.49,
+          "currency": "EUR",
+          "description": "Hearty and flavorful barley grains, great for soups and stews.",
+          "imageURL": "https://example.com/images/barley.jpg"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Legumes",
+      "description": "beans, lentils, chickpeas",
+      "products": [
+        {
+          "id": 31,
+          "name": "Black Beans",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Hearty and flavorful black beans, great for soups and stews.",
+          "imageURL": "https://example.com/images/black-beans.jpg"
+        },
+        {
+          "id": 32,
+          "name": "Green Lentils",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Nutritious and flavorful green lentils, great for salads and soups.",
+          "imageURL": "https://example.com/images/green-lentils.jpg"
+        },
+        {
+          "id": 33,
+          "name": "Chickpeas",
+          "price": 1.49,
+          "currency": "EUR",
+          "description": "Versatile and delicious chickpeas, great for hummus and curries.",
+          "imageURL": "https://example.com/images/chickpeas.jpg"
+        },
+        {
+          "id": 34,
+          "name": "Kidney Beans",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Hearty and flavorful kidney beans, great for chili and salads.",
+          "imageURL": "https://example.com/images/kidney-beans.jpg"
+        },
+        {
+          "id": 35,
+          "name": "Split Peas",
+          "price": 1.29,
+          "currency": "EUR",
+          "description": "Hearty and nutritious split peas, great for soups and stews.",
+          "imageURL": "https://example.com/images/split-peas.jpg"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Nuts",
+      "description": "almonds, walnuts, cashews",
+      "products": [
+        {
+          "id": 36,
+          "name": "Almonds",
+          "price": 8.99,
+          "currency": "EUR",
+          "description": "Crunchy and nutritious almonds, great for snacking and baking.",
+          "imageURL": "https://example.com/images/almonds.jpg"
+        },
+        {
+          "id": 37,
+          "name": "Walnuts",
+          "price": 7.49,
+          "currency": "EUR",
+          "description": "Rich and flavorful walnuts, great for snacking and baking.",
+          "imageURL": "https://example.com/images/walnuts.jpg"
+        },
+        {
+          "id": 38,
+          "name": "Cashews",
+          "price": 9.99,
+          "currency": "EUR",
+          "description": "Buttery and delicious cashews, great for snacking and stir-fries.",
+          "imageURL": "https://example.com/images/cashews.jpg"
+        },
+        {
+          "id": 39,
+          "name": "Pecans",
+          "price": 10.99,
+          "currency": "EUR",
+          "description": "Sweet and crunchy pecans, great for pies and snacking.",
+          "imageURL": "https://example.com/images/pecans.jpg"
+        },
+        {
+          "id": 40,
+          "name": "Pistachios",
+          "price": 11.99,
+          "currency": "EUR",
+          "description": "Salty and flavorful pistachios, great for snacking and salads.",
+          "imageURL": "https://example.com/images/pistachios.jpg"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Seeds",
+      "description": "chia, flax, pumpkin",
+      "products": [
+        {
+          "id": 41,
+          "name": "Chia Seeds",
+          "price": 5.99,
+          "currency": "EUR",
+          "description": "Nutritious and versatile chia seeds, great for smoothies and puddings.",
+          "imageURL": "https://example.com/images/chia-seeds.jpg"
+        },
+        {
+          "id": 42,
+          "name": "Flax Seeds",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Nutritious and flavorful flax seeds, great for baking and smoothies.",
+          "imageURL": "https://example.com/images/flax-seeds.jpg"
+        },
+        {
+          "id": 43,
+          "name": "Pumpkin Seeds",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Crunchy and nutritious pumpkin seeds, great for snacking and salads.",
+          "imageURL": "https://example.com/images/pumpkin-seeds.jpg"
+        },
+        {
+          "id": 44,
+          "name": "Sesame Seeds",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Tasty and nutritious sesame seeds, great for baking and stir-fries.",
+          "imageURL": "https://example.com/images/sesame-seeds.jpg"
+        },
+        {
+          "id": 45,
+          "name": "Sunflower Seeds",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Crunchy and flavorful sunflower seeds, great for snacking and salads.",
+          "imageURL": "https://example.com/images/sunflower-seeds.jpg"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Breads and Pastries",
+      "description": "bread, croissant, bagel",
+      "products": [
+        {
+          "id": 46,
+          "name": "Sourdough Bread",
+          "price": 3.49,
+          "currency": "EUR",
+          "description": "Artisanal sourdough bread, great for sandwiches and toasts.",
+          "imageURL": "https://example.com/images/sourdough-bread.jpg"
+        },
+        {
+          "id": 47,
+          "name": "Croissant",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Buttery and flaky croissant, great for breakfast and brunch.",
+          "imageURL": "https://example.com/images/croissant.jpg"
+        },
+        {
+          "id": 48,
+          "name": "Bagel",
+          "price": 0.99,
+          "currency": "EUR",
+          "description": "Soft and chewy bagel, great for sandwiches and spreads.",
+          "imageURL": "https://example.com/images/bagel.jpg"
+        },
+        {
+          "id": 49,
+          "name": "Cinnamon Roll",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Sweet and gooey cinnamon roll, great for breakfast and dessert.",
+          "imageURL": "https://example.com/images/cinnamon-roll.jpg"
+        },
+        {
+          "id": 50,
+          "name": "Danish Pastry",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Flaky and buttery Danish pastry, great for breakfast and brunch.",
+          "imageURL": "https://example.com/images/danish-pastry.jpg"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Pasta and Noodles",
+      "description": "spaghetti, fettuccine, ramen",
+      "products": [
+        {
+          "id": 51,
+          "name": "Spaghetti",
+          "price": 1.29,
+          "currency": "EUR",
+          "description": "Classic and versatile spaghetti, great with tomato sauce and meatballs.",
+          "imageURL": "https://example.com/images/spaghetti.jpg"
+        },
+        {
+          "id": 52,
+          "name": "Fettuccine",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Rich and flavorful fettuccine, great with creamy sauces and seafood.",
+          "imageURL": "https://example.com/images/fettuccine.jpg"
+        },
+        {
+          "id": 53,
+          "name": "Ramen",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Hearty and flavorful ramen, great with pork belly and soft-boiled egg.",
+          "imageURL": "https://example.com/images/ramen.jpg"
+        },
+        {
+          "id": 54,
+          "name": "Lasagna",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Layers of pasta, meat, cheese, and tomato sauce, great for family dinners.",
+          "imageURL": "https://example.com/images/lasagna.jpg"
+        },
+        {
+          "id": 55,
+          "name": "Udon Noodles",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Thick and chewy udon noodles, great with broth and tempura.",
+          "imageURL": "https://example.com/images/udon-noodles.jpg"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Sauces and Condiments",
+      "description": "ketchup, mayonnaise, mustard",
+      "products": [
+        {
+          "id": 56,
+          "name": "Ketchup",
+          "price": 1.29,
+          "currency": "EUR",
+          "description": "Tangy and sweet ketchup, great with fries and burgers.",
+          "imageURL": "https://example.com/images/ketchup.jpg"
+        },
+        {
+          "id": 57,
+          "name": "Mayonnaise",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Creamy and tangy mayonnaise, great with sandwiches and salads.",
+          "imageURL": "https://example.com/images/mayonnaise.jpg"
+        },
+        {
+          "id": 58,
+          "name": "Mustard",
+          "price": 0.99,
+          "currency": "EUR",
+          "description": "Sharp and pungent mustard, great with hot dogs and pretzels.",
+          "imageURL": "https://example.com/images/mustard.jpg"
+        },
+        {
+          "id": 59,
+          "name": "Soy Sauce",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Savory and salty soy sauce, great for dipping and marinade.",
+          "imageURL": "https://example.com/images/soy-sauce.jpg"
+        },
+        {
+          "id": 60,
+          "name": "Hot Sauce",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Fiery and flavorful hot sauce, great for adding heat to dishes.",
+          "imageURL": "https://example.com/images/hot-sauce.jpg"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Sweets and Desserts",
+      "description": "ice cream, cake, chocolate",
+      "products": [
+        {
+          "id": 61,
+          "name": "Vanilla Ice Cream",
+          "price": 3.49,
+          "currency": "EUR",
+          "description": "Classic and creamy vanilla ice cream, great on its own or with toppings.",
+          "imageURL": "https://example.com/images/vanilla-ice-cream.jpg"
+        },
+        {
+          "id": 62,
+          "name": "Chocolate Cake",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Decadent and rich chocolate cake, great for celebrations and special occasions.",
+          "imageURL": "https://example.com/images/chocolate-cake.jpg"
+        },
+        {
+          "id": 63,
+          "name": "Fruit Tart",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Buttery and flaky tart crust filled with fresh fruits, great for summer desserts.",
+          "imageURL": "https://example.com/images/fruit-tart.jpg"
+        },
+        {
+          "id": 64,
+          "name": "Caramel Popcorn",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Sweet and crunchy popcorn coated in rich caramel, great for movie nights.",
+          "imageURL": "https://example.com/images/caramel-popcorn.jpg"
+        },
+        {
+          "id": 65,
+          "name": "Gummy Bears",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Chewy and fruity gummy bears, great for snacking and sharing.",
+          "imageURL": "https://example.com/images/gummy-bears.jpg"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Snacks",
+      "description": "chips, crackers, nuts",
+      "products": [
+        {
+          "id": 66,
+          "name": "Potato Chips",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Thin and crispy potato chips, great for snacking and dipping.",
+          "imageURL": "https://example.com/images/potato-chips.jpg"
+        },
+        {
+          "id": 67,
+          "name": "Cheese Crackers",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Buttery and cheesy crackers, great for snacking and pairing with wine.",
+          "imageURL": "https://example.com/images/cheese-crackers.jpg"
+        },
+        {
+          "id": 68,
+          "name": "Mixed Nuts",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Roasted and salted mixed nuts, great for snacking and parties.",
+          "imageURL": "https://example.com/images/mixed-nuts.jpg"
+        },
+        {
+          "id": 69,
+          "name": "Beef Jerky",
+          "price": 4.99,
+          "currency": "EUR",
+          "description": "Savory and chewy beef jerky, great for hiking and camping.",
+          "imageURL": "https://example.com/images/beef-jerky.jpg"
+        },
+        {
+          "id": 70,
+          "name": "Trail Mix",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Nutty and fruity trail mix, great for outdoor activities and snacking.",
+          "imageURL": "https://example.com/images/trail-mix.jpg"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Beverages",
+      "description": "soda, juice, tea",
+      "products": [
+        {
+          "id": 71,
+          "name": "Cola",
+          "price": 1.49,
+          "currency": "EUR",
+          "description": "Classic and refreshing cola, great for quenching thirst.",
+          "imageURL": "https://example.com/images/cola.jpg"
+        },
+        {
+          "id": 72,
+          "name": "Orange Juice",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Fresh and citrusy orange juice, great for breakfast and brunch.",
+          "imageURL": "https://example.com/images/orange-juice.jpg"
+        },
+        {
+          "id": 73,
+          "name": "Green Tea",
+          "price": 3.49,
+          "currency": "EUR",
+          "description": "Light and fragrant green tea, great for relaxationand detox.",
+          "imageURL": "https://example.com/images/green-tea.jpg"
+        },
+        {
+          "id": 74,
+          "name": "Sparkling Water",
+          "price": 0.99,
+          "currency": "EUR",
+          "description": "Bubbly and refreshing sparkling water, great for hydration.",
+          "imageURL": "https://example.com/images/sparkling-water.jpg"
+        },
+        {
+          "id": 75,
+          "name": "Iced Tea",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Sweet and refreshing iced tea, great for hot summer days.",
+          "imageURL": "https://example.com/images/iced-tea.jpg"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Spices and Herbs",
+      "description": "cumin, coriander, rosemary",
+      "products": [
+        {
+          "id": 76,
+          "name": "Cumin Powder",
+          "price": 2.99,
+          "currency": "EUR",
+          "description": "Aromatic and warm cumin powder, great for adding flavor to curries and stews.",
+          "imageURL": "https://example.com/images/cumin-powder.jpg"
+        },
+        {
+          "id": 77,
+          "name": "Coriander Seeds",
+          "price": 1.49,
+          "currency": "EUR",
+          "description": "Sweet and citrusy coriander seeds, great for marinades and dressings.",
+          "imageURL": "https://example.com/images/coriander-seeds.jpg"
+        },
+        {
+          "id": 78,
+          "name": "Rosemary Leaves",
+          "price": 2.49,
+          "currency": "EUR",
+          "description": "Fragrant and earthy rosemary leaves, great for roasts and potatoes.",
+          "imageURL": "https://example.com/images/rosemary-leaves.jpg"
+        },
+        {
+          "id": 79,
+          "name": "Cinnamon Sticks",
+          "price": 3.99,
+          "currency": "EUR",
+          "description": "Sweet and warming cinnamon sticks, great for baking and desserts.",
+          "imageURL": "https://example.com/images/cinnamon-sticks.jpg"
+        },
+        {
+          "id": 80,
+          "name": "Dried Basil",
+          "price": 1.99,
+          "currency": "EUR",
+          "description": "Mild and fragrant dried basil, great for sauces and pasta dishes.",
+          "imageURL": "https://example.com/images/dried-basil.jpg"
+        }
+      ]
+    }
+  ]
+}
