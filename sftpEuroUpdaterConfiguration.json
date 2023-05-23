@@ -1,9 +1,14 @@
 {
-  "scheduler": {
-    "hourOfDay": 17,
-    "minute": 0,
-    "enabled": true
-  },
-  "filenameForSFTPfile": "NOVIDEA_VODAFONE SIM CARDS.xlsx",
-  "filePrefixForProductionFile": "EMS_PAX_Daily"
+  "cacheDirectory": "%APPDATA%\\sftpEuroUpdater\\",
+  "filenameForSFTPFile": "NOVIDEA_VODAFONE SIM CARDS.xlsx",
+  "filenameForProductionFile": "",
+  "isUAT": true,
+  "remoteFilePathPROD": "",
+  "remoteFilePathUAT": "/Novidea2EMSPI/",
+  "applicationName": "sftoEuroUpdater",
+  "filePrefixForProductionFile": "EMS_PAX_Daily",
+  "schedulerEnabled": true,
+  "schedulerHourOfDay": 17,
+  "schedulerMinute": 0,
+  "configurationURL": "https://77manos7.github.io/jsonlibraryfiles/"
 }
