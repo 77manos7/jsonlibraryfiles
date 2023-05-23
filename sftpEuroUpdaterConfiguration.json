@@ -5,10 +5,5 @@
     "enabled": true
   },
   "filenameForSFTPfile": "NOVIDEA_VODAFONE SIM CARDS.xlsx",
-  "remoteFilePath": "/Novidea2EMSPI/",
-  "usernameForSFTP": "NovideaEMSPI-TEST",
-  "passwordForSFTP": "Km82re$69@12u9pg",
-  "hostname": "10.1.48.131",
-  "api_key": "AIzaSyDW_H0QpzbdEN_0neE5KVlh9M3z8ECsavA",
   "filePrefixForProductionFile": "EMS_PAX_Daily"
 }
