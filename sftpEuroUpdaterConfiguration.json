@@ -1,5 +1,4 @@
 {
-  "cacheDirectory": "%APPDATA%\\sftpEuroUpdater\\",
   "filenameForSFTPFile": "NOVIDEA_VODAFONE SIM CARDS.xlsx",
   "filenameForProductionFile": "",
   "isUAT": true,
