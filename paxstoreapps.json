@@ -7,6 +7,199 @@
     {
       "name": "Avin Do PayatPump",
       "package": "gr.payatpumpdo.avin"
+    },
+     {
+      "name": "Maitre Cardlink",
+      "package": "gr.cardlink.maitre"
+    },
+     {
+      "name": "WorldLine Cardlink",
+      "package": "gr.worldline.possible"
+    },
+     {
+      "name": "Cardlink Apm",
+      "package": "gr.cardlink.apm"
+    },
+       {
+      "name": "Ventrata",
+      "package": "com.ventrata.app"
+    },
+       {
+      "name": "Posit Pos",
+      "package": "com.posit.myposit.paxA80"
+    },
+      {
+      "name": "Uat Coral Do PayatPump",
+      "package": "gr.payatpumpdo.coral.uat"
+    },
+      {
+      "name": "Noviville Pay Cardlink",
+      "package": "com.novovillepay.novoville"
+    },
+      {
+      "name": "Cardlink",
+      "package": "gr.cardlink.possiple"
+    },
+      {
+      "name": "Avin Pay At pump novidea ",
+      "package": "gr.mobile.avinpayatpump"
+    },
+      {
+      "name": "Coral Pay At pump Cardlink ",
+      "package": "gr.mobile.coralpayatpump"
+    },
+    {
+      "name": "Cardlink Parking Novidea",
+      "package": "gr.cardlink.possible.parking"
+    },
+    {
+      "name": "Cardlink Ticketing Novidea ",
+      "package": "com.frontend"
+    },
+    {
+      "name": "Uat Avin Pay At pump novidea ",
+      "package": "gr.mobile.avinpayatpump.development"
+    },
+    {
+      "name": "Uat Coral Pay At pump Novidea ",
+      "package": "gr.mobile.coralpayatpump.development"
+    },
+    {
+      "name": "Cardlink Qr pay",
+      "package": "gr.cardlink.qr_reader.app"
+    },
+    {
+      "name": "Im30 Unattended ",
+      "package": "gr.cardlink.unattendedapplication"
+    },
+    {
+      "name": "Easypetbath Novidea",
+      "package": "com.example.easypetbath"
+    },
+    {
+      "name": "Cardlink Cardlink",
+      "package": "gr.cardlink.androidpos"
+    },
+    {
+      "name": "Uat Avin Do Pay At pump novidea ",
+      "package": "gr.payatpumpdo.avin.uat"
+    },
+      {
+      "name": "Evo Cashier lite ",
+      "package": "com.everonet.evocashier"
+    },
+      {
+      "name": "Covid free Gr Novidea ",
+      "package": "gr.gov.dcc.mini"
+    },
+      {
+      "name": "VF SSK R-10 ",
+      "package": "com.vfsskr10"
+    },
+      {
+      "name": "Nanotax android driver novidea  ",
+      "package": "gr.nanosoft.nanotax"
+    },
+      {
+      "name": "Planet tax free Novidea ",
+      "package": "fi.planetpayment.issuing"
+    },
+     {
+      "name": "E- ταμειακή Novidea ",
+      "package": "com.invoicing"
+    },
+     {
+      "name": "Nfr uat AvinPayAtPump cardlink",
+      "package": "gr.mobile.avinpayatpump.development.nfr"
+    },
+     {
+      "name": "Payatpump Barcode Test Cardlink ",
+      "package": "gr.atcom.barcodetest"
+    },
+     {
+      "name": "Nfr uat CoralPayAtPump cardlink",
+      "package": "gr.mobile.coralpayatpump.development.nfr"
+    },
+     {
+      "name": "Qr reader cardlink",
+      "package": "com.elpe.qr_reader_app"
+    },
+     {
+      "name": "ocg360v5 novidea ",
+      "package": "gr.itconcept.software.ocg360"
+    },
+    {
+      "name": "cardlink qr pay uat ",
+      "package": "gr.uatcardlink.qr_reader.app"
+    },
+    {
+      "name": "Nfr avin pay at pump cardlink ",
+      "package": "gr.mobile.avinpayatpump.nfr"
+    },
+    {
+      "name": "Qr Reader Uat Cardlink",
+      "package": "com.uatelpe.qr_reader_app"
+    },
+    {
+      "name": "Nfr coral Pay At Pump cardlink",
+      "package": "gr.mobile.coralpayatpump.nfr"
+    },
+    {
+      "name": "NovovillePay uat Cardlink ",
+      "package": "com.novovillepay.novoville.dev"
+    },
+    {
+      "name": "ic-2 gb tax free cardlink",
+      "package": "com.globalblue.ic20.droid"
+    },
+    {
+      "name": "smiles By Cardlink uat Cardlink",
+      "package": "com.crm.app.v5.cardlinkrewardsmerchantpos"
+    },
+    {
+      "name": "smiles By Cardlink",
+      "package": "com.crm.cardlinkmerchant"
+    },
+    {
+      "name": "Eyeson novidea",
+      "package": "eyeson.digital.signage"
+    },
+    {
+      "name": "gift card by Cardlink",
+      "package": "com.crm.cardlink.giftcard"
+    },
+    {
+      "name": "gift card by Cardlink Uat",
+      "package": "com.crm.cardlink"
+    },
+    {
+      "name": "android system webview Novidea",
+      "package": "com.google.android.webview"
+    },
+    {
+      "name": "Cardlink smart Novidea",
+      "package": "com.epsilonnet.cardlinksmart"
+    },
+     {
+      "name": "Benaki Museum Cardlink",
+      "package": "gr.cardlink.benaki"
+    },
+     {
+      "name": "uat nf coralpayatpunp  Novidea",
+      "package": "gr.mobilecoralpayatpump.nfdevelopment"
+    },
+     {
+      "name": "coral pay pump nf novidea",
+      "package": "gr.mobile.coralpayatpump.nf"
+    },
+     {
+      "name": "quickedit 9 pos",
+      "package": "com.rhmsoft.edit"
+    },
+     {
+      "name": "ventrata",
+      "package": "com.ventrata.terminal"
     }
+    
   ]
 }
