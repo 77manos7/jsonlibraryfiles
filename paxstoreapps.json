@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "Coral Do PayatPump",
+      "package": "gr.payatpumpdo.coral"
+    },
+    {
+      "name": "Avin Do PayatPump",
+      "package": "gr.payatpumpdo.avin"
+    }
+  ]
+}
