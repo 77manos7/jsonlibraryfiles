@@ -70,7 +70,7 @@
 "refundValidationEnabled": false,
 "localSaleEnabled": false,
 "isManualAcquirerSelection": false,
-"preAuthEnabled": false,
+"preAuthEnabled": true,
 "unattendedMode": true,
 "mdbManagerEnabled": false,
 "fileLoggerEnabled": true,
