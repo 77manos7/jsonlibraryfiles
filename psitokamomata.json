@@ -427,6 +427,7 @@
       "id": 10,
       "name": "Breads and Pastries",
       "description": "bread, croissant, bagel",
+      "imageURL":"https://raw.githubusercontent.com/77manos7/jsonlibraryfiles/main/breads%20and%20pastries.png",
       "products": [
         {
           "id": 46,
