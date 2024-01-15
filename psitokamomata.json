@@ -100,7 +100,7 @@
       "id": 3,
       "name": "Dairy",
       "description": "milk, cheese, yogurt",
-      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/dairy.png?raw=true",
+      "imageURL":"https://raw.githubusercontent.com/77manos7/jsonlibraryfiles/main/dairy.png",
       "products": [
         {
           "id": 11,
