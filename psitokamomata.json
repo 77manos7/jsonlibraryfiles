@@ -4,6 +4,7 @@
       "id": 1,
       "name": "Meat",
       "description": "beef, chicken, pork",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/meat.png?raw=true",
       "products": [
         {
           "id": 1,
@@ -51,6 +52,7 @@
       "id": 2,
       "name": "Seafood",
       "description": "fish, shrimp, crab",
+       "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/seafpood.jpg?raw=true",
       "products": [
         {
           "id": 6,
@@ -98,6 +100,7 @@
       "id": 3,
       "name": "Dairy",
       "description": "milk, cheese, yogurt",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/dairy.jpg?raw=true",
       "products": [
         {
           "id": 11,
@@ -145,6 +148,7 @@
       "id": 4,
       "name": "Fruits",
       "description": "apples, bananas, oranges",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/fruits.jpg?raw=true",
       "products": [
         {
           "id": 16,
@@ -192,6 +196,7 @@
       "id": 5,
       "name": "Vegetables",
       "description": "carrots, broccoli, potatoes",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/vegetables.jpg?raw=true",
       "products": [
         {
           "id": 21,
@@ -239,6 +244,7 @@
       "id": 6,
       "name": "Grains",
       "description": "rice, quinoa, oats",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/grains.jpg?raw=true",
       "products": [
         {
           "id": 26,
@@ -286,6 +292,7 @@
       "id": 7,
       "name": "Legumes",
       "description": "beans, lentils, chickpeas",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/legumes.jpg?raw=true",
       "products": [
         {
           "id": 31,
@@ -333,6 +340,7 @@
       "id": 8,
       "name": "Nuts",
       "description": "almonds, walnuts, cashews",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/nuts.jpg?raw=true",
       "products": [
         {
           "id": 36,
@@ -380,6 +388,7 @@
       "id": 9,
       "name": "Seeds",
       "description": "chia, flax, pumpkin",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/seeds.jpg?raw=true",
       "products": [
         {
           "id": 41,
@@ -475,6 +484,7 @@
       "id": 11,
       "name": "Pasta and Noodles",
       "description": "spaghetti, fettuccine, ramen",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/pasta%20and%20noodles.jpg?raw=true",
       "products": [
         {
           "id": 51,
@@ -522,6 +532,7 @@
       "id": 12,
       "name": "Sauces and Condiments",
       "description": "ketchup, mayonnaise, mustard",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/sauces.jpg?raw=true",
       "products": [
         {
           "id": 56,
@@ -569,6 +580,7 @@
       "id": 13,
       "name": "Sweets and Desserts",
       "description": "ice cream, cake, chocolate",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/sweets.jpg?raw=true",
       "products": [
         {
           "id": 61,
@@ -616,6 +628,7 @@
       "id": 14,
       "name": "Snacks",
       "description": "chips, crackers, nuts",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/snacks.jpg?raw=true",
       "products": [
         {
           "id": 66,
@@ -663,6 +676,7 @@
       "id": 15,
       "name": "Beverages",
       "description": "soda, juice, tea",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/beverages.jpg?raw=true",
       "products": [
         {
           "id": 71,
@@ -710,6 +724,7 @@
       "id": 16,
       "name": "Spices and Herbs",
       "description": "cumin, coriander, rosemary",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/sweets.jpg?raw=true",
       "products": [
         {
           "id": 76,
