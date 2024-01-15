@@ -292,7 +292,7 @@
       "id": 7,
       "name": "Legumes",
       "description": "beans, lentils, chickpeas",
-      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/menu_images/categories/legumes.png?raw=true"
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/menu_images/categories/legumes.png?raw=true",
       "products": [
         {
           "id": 31,
