@@ -148,7 +148,7 @@
       "id": 4,
       "name": "Fruits",
       "description": "apples, bananas, oranges",
-      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/fruits.png?raw=true",
+      "imageURL":"https://raw.githubusercontent.com/77manos7/jsonlibraryfiles/main/fruits.png",
       "products": [
         {
           "id": 16,
@@ -724,7 +724,7 @@
       "id": 16,
       "name": "Spices and Herbs",
       "description": "cumin, coriander, rosemary",
-      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/sweets.png?raw=true",
+      "imageURL":"https://github.com/77manos7/jsonlibraryfiles/blob/main/spices.jpg?raw=true",
       "products": [
         {
           "id": 76,
