@@ -1,0 +1,40 @@
+{
+  "content": [
+    {
+    "id": 1,
+    "position": 1,
+    "type": "image",
+    "bannerText": "Welcome to our event!",
+    "playtime": 5,
+    "url": "http://dimcost42.ddns.net:8080/files/novidea.png",
+    "landscape": false,
+    "availableFrom": "2024-01-30T08:00:00",
+    "availableTo": "2024-01-31T20:00:00",
+    "filePath": null
+  },
+    {
+    "id": 2,
+    "position": 2,
+    "type": "video",
+    "bannerText": "Watch our promotional video!",
+    "playtime": 5,
+    "url": "http://dimcost42.ddns.net:8080/files/BellaCiao.mp4",
+    "landscape": true,
+    "availableFrom": "2024-02-01T10:00:00",
+    "availableTo": "2024-02-05T18:00:00",
+    "filePath": null
+  },
+    {
+    "id": 3,
+    "position": 3,
+    "type": "image",
+    "bannerText": "Do not urinate!",
+    "playtime": 5,
+    "url": "https://raw.githubusercontent.com/77manos7/jsonlibraryfiles/main/test1.png",
+    "landscape": false,
+    "availableFrom": "2024-02-01T10:00:00",
+    "availableTo": "2024-02-05T18:00:00",
+    "filePath": null
+  }
+  ]
+}
