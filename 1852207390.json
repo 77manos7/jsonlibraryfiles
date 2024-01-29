@@ -47,6 +47,18 @@
     "availableFrom": "2024-02-01T10:00:00",
     "availableTo": "2024-02-05T18:00:00",
     "filePath": null
+  },
+    {
+    "id": 5,
+    "position": 5,
+    "type": "image",
+    "bannerText": "Do not urinate!",
+    "playtime": 5,
+    "url": "https://raw.githubusercontent.com/77manos7/jsonlibraryfiles/main/test3.jpg",
+    "landscape": false,
+    "availableFrom": "2024-02-01T10:00:00",
+    "availableTo": "2024-02-05T18:00:00",
+    "filePath": null
   }
   ]
 }
