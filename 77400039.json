@@ -313,6 +313,14 @@
 			"clssParam": "https://mpos.cardlink.gr/files/easylink/IM310/clss_param.txt",
 			"emvParam": "https://mpos.cardlink.gr/files/easylink/IM310/emv_param.txt"
 		},
+		"sp20_files": {
+"bootFile": "https://mpos.cardlink.gr/files/easylink/sp20/EasyLink_Lite_v1.13.07W_SP20V4_NO_JCB_PURE_20240207_sign.txt",
+"uiParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4.txt",
+"uiGreekParam": "https://mpos.cardlink.gr/files/easylink/sp20/ui_sp20v4_greek.txt",
+"clssParam": "https://mpos.cardlink.gr/files/easylink/sp20/clss_param.txt",
+"emvParam": "https://mpos.cardlink.gr/files/easylink/sp20/emv_param.txt",
+"greekLngParam": "https://mpos.cardlink.gr/files/easylink/sp20/greek.txt"
+},
 		"d220_files": {
 			"bootFile": "https://mpos.cardlink.gr/files/easylink/d220/EasyLink_Full_v2.03.00_20200119_sign.txt",
 			"osFile": "https://mpos.cardlink.gr/files/easylink/d220/prolin-cygnus-2.6.64.8063R_SIG.txt",
