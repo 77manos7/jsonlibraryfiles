@@ -10,10 +10,10 @@
 "merchantID": "0100984178",
 "merchantVatNumber": "979703476",
 "cardlinkMerchantType": "100",
-"terminalID": "77400039",
+"terminalID": "12211903",
 "customerID": "00000000000001",
-"acqIndetifier": "014",
-"acqName": "ALPHA BANK"
+"acqIndetifier": "",
+"acqName": ""
 },
 "multiAcq": {
 "acquirers": [
