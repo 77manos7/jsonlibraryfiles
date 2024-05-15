@@ -11,6 +11,7 @@
 "cardlinkMerchantType": "100",
 "terminalID": "77400039",
 "customerID": "00000000000001",
+"merchantVatNumber": "979703476",
 "acqIndetifier": "014",
 "acqName": "ALPHA BANK"
 },
@@ -113,7 +114,7 @@
 "ecrSystemDefaultPort": 4000,
 "ecrSystemMode": 0,
 "ecrSystemProtocol": 0,
-"ecrVendor": "0",
+"ecrVendor": "1",
 "supportBonusPoolBlock": false
 },
 "billPayment": {
