@@ -1192,7 +1192,7 @@ class TransactionResult {
     <pre><code onclick="openModal('closeBatchModal')">
         private fun sendCloseBatch() {
             val closeBatchIntent = Intent().apply {
-                component = applicationType.toComponentName()
+                component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
                 putExtra("closeBatch", "")
             }
             launcher.launch(closeBatchIntent)
@@ -1221,15 +1221,10 @@ class TransactionResult {
     
                 // Post detailed result to LiveData
                 val detailedResult = "Transaction ID: ${result.transactionId}, Amount: ${result.amountTotalString}, Installments: ${result.installments}, Tip: ${result.amountTip}"
-                transactionResultLiveData.postValue(detailedResult)
     
                 result
             } catch (ex: Exception) {
                 logger.error("Could not parse data $ex")
-    
-                // Post the error to the LiveData
-                transactionResultLiveData.postValue("Error: Could not parse data")
-                null
             }
         }
 </code></pre>
