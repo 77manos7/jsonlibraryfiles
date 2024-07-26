@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deeplink Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 1px;
+            border-radius: 10px;
+            font-family: Consolas, monospace;
+            cursor: pointer;
+        }
+
+        pre {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Deeplink Documentation</h1>
+
+    <h2>Simple Sale Deeplink Request</h2>
+    <p>In order to perform a simple sale request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('SaleModal')">
+    val paymentIntent = Intent()
+    paymentIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+    paymentIntent.putExtra("payment", getPaymentData())
+
+    If the sale request includes a signature also add:
+    paymentIntent.putExtra("validationType", "signature")
+
+    or if the sale request includes an ecr token, also add:
+    paymentIntent.putExtra("validationType", "ecrToken")
+</code></pre>
+
+    <div id="SaleModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('SaleModal')">×</span>
+            <h2>Sale Object</h2>
+            <pre><code>
+
+data class PaymentData {
+    var clientTransactionId: String? = null        
+    var type: String? = null                       
+    var currency: String? = null                   
+    var price: String? = null                      
+    var tip: String? = null                        
+    var installments: Int? = null                  
+    var language: String? = null                   
+    var appLinkPackageName: String? = null         
+    var serviceId: String? = null                  
+    var referenceId: String? = null                
+    var allowPOSsiblePrint: Int? = null            
+    var oneTap: Int = 1                            
+    var preAuthFrom: Long? = null                   
+    var preAuthTo: Long? = null                     
+    var roomOrContractNumber: String? = null
+    var field1Name: String? = null
+    var field1Type: String? = null
+    var field1Value: String? = null
+    var field2Name: String? = null
+    var field2Type: String? = null
+    var field2Value: String? = null
+    var field3Name: String? = null
+    var field3Type: String? = null
+    var field3Value: String? = null
+    var ecrToken: String? = null
+    var providerSignature: String? = null
+    var documentIdentifier: String? = null
+    var providerId: String? = null
+    var signatureDatetime: String? = null
+    var amountPayable: String? = null
+    var netValue: String? = null
+    var vat: String? = null
+    var totalDocumentValue: String? = null
+    var posId: String? = null
+    var transactionDateTime: String? = null
+    var uniqueEntryNumber: String? = null
+    var foodService: String? = null
+    var thirdPartyTaxId: String? = null
+}
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+    <p>Method to build the paymentDataJson object:</p>
+
+    <pre><code onclick="openModal('SaleModal')">
+    private fun getPaymentData(): String? {
+        // Build the payment data JSON string
+        val builder = PaymentBuilder()
+        builder.clientTransactionId = clientTransactionId
+        builder.type = "SALE"
+        builder.currency = "EUR"
+        builder.price = binding.moneyEditText.text.toString()
+        builder.tip = tipAmount
+        builder.installments = binding.installmentsSpinner.selectedItemPosition
+        builder.language = "EL"
+        builder.appLinkPackageName = Constants.SALE_CART_PACKAGE
+        builder.allowPOSsiblePrint = allowPOSsiblePrint
+        builder.oneTap = 1
+        builder.preAuthFrom = startDateTimestamp
+        builder.preAuthTo = endDateTimestamp
+        builder.serviceId = ""
+        builder.referenceId = ""
+
+        if (binding.toggleSignature.isChecked) {
+            builder.providerSignature = binding.enterSignatureEditText.text.toString()
+            builder.providerId = binding.enterProviderIdEditText.text.toString()
+            builder.signatureDatetime = binding.signatureDatetimeEditText.text.toString()
+            builder.documentIdentifier = binding.documentIdentifierEditText.text.toString()
+            builder.posId = binding.posIdEditText.text.toString()
+            builder.transactionDateTime = "010320024"
+            builder.amountPayable = binding.enterAmountPayableEditText.text.toString()
+            builder.totalDocumentValue = binding.totalDocumentValueEditText.text.toString()
+            builder.netValue = binding.enterNetAmountEditText.text.toString()
+            builder.vat = binding.vatEditText.text.toString()
+            builder.uniqueEntryNumber = binding.uniqueEntryNumberEditText.text.toString() ?: ""
+        }
+
+        if (binding.toggleEcrToken.isChecked) {
+            builder.ecrToken = ecrToken
+        }
+
+        if (binding.toggleForMIFField1.isChecked || binding.toggleForMIFField2.isChecked || binding.toggleForMIFField3.isChecked) {
+            builder.field1Name = saleCartViewModel.field1Name.value
+            builder.field1Type = saleCartViewModel.field1Type.value
+            builder.field1Value = saleCartViewModel.field1Value.value
+            builder.field2Name = saleCartViewModel.field2Name.value
+            builder.field2Type = saleCartViewModel.field2Type.value
+            builder.field2Value = saleCartViewModel.field2Value.value
+            builder.field3Name = saleCartViewModel.field3Name.value
+            builder.field3Type = saleCartViewModel.field3Type.value
+            builder.field3Value = saleCartViewModel.field3Value.value
+        }
+
+        if (binding.toggleForRentals.isChecked || binding.toggleForHotels.isChecked) {
+            builder.roomOrContractNumber = binding.enterRoomOrContractNumber.text.toString()
+        }
+
+        return Gson().toJson(builder.build())
+    }
+</code></pre>
+
+    __________________________________________________________________________________________________________
+
+    <h2>Reversal Deeplink Request</h2>
+    <p>In order to perform a reversal request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('ReversalModal')">
+    val reversalIntent = Intent()
+    reversalIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+    reversalIntent.putExtra("reversal",getReversalData())
+</code></pre>
+
+    <div id="ReversalModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('ReversalModal')">×</span>
+            <h2>Reversal Object</h2>
+            <pre><code>
+            
+data class Reversal (
+    var type: String?,
+    var currency: String?,
+    var bankId: String?,
+    var posTransactionId: String?,
+    var batchId: String?,
+    var sequenceId: String?,
+    var posDateTime: String?,
+    var appLinkPackageName: String?,
+    var serviceId: String?,
+    var referenceId: String?,
+    var clientTransactionId: String?,
+    var oneTap: Int?
+)
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <p>Method to build the getReversalData object:</p>
+
+    <pre><code onclick="openModal('ReversalModal')">
+        private fun getReversalData(): String? {
+            val builder = ReversalBuilder()
+            builder.type = "REVERSAL"
+            builder.currency = "EUR"
+            builder.bankId = ""
+            builder.posTransactionId = ""
+            builder.batchId = ""
+            builder.sequenceId = ""
+            builder.posDateTime = ""
+            builder.appLinkPackageName = Constants.CANCEL_CART_PACKAGE
+            builder.serviceId = ""
+            builder.referenceId = ""
+            builder.clientTransactionId = "ID_1234"
+            builder.oneTap = 1
+    
+            return Gson().toJson(builder.build())
+        }
+    </code></pre>
+
+    __________________________________________________________________________________________________________
+
+
+    <h2>Pre Auth Deeplink Request</h2>
+    <p>In order to perform a Pre Auth request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('PreAuthModal')">
+        private fun sendPreAuth() {
+            clientTransactionId = binding.clientIdEditText.text.toString()
+          
+            tipAmount = if (binding.tipEditText.text.toString() == "€0,00") "" else binding.tipEditText.text.toString()
+    
+            val preAuthDataJson = getPreAuthData()
+            logger.info("preAuthDataJson $preAuthDataJson")
+            val transactionType = arguments?.getString("applicationType")
+    
+            val preAuthIntent = Intent()
+            preAuthIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+            preAuthIntent.putExtra("pre_auth", preAuthDataJson)
+            launcher.launch(preAuthIntent)
+        }
+</code></pre>
+
+    <div id="PreAuthModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('PreAuthModal')">×</span>
+            <h2>Pre Auth Object</h2>
+            <pre><code>
+    data class Payment(
+    var clientTransactionId: String?,
+    var type: String?,
+    var currency: String?,
+    var price: String? = null,
+    var tip: String?,
+    var installments: Int?,
+    var language: String?,
+    var appLinkPackageName: String?,
+    var serviceId: String?,
+    var referenceId: String?,
+    var allowPOSsiblePrint: Int?,
+    var oneTap: Int,
+    var preAuthFrom: Long? = null,
+    var preAuthTo: Long? = null,
+    var roomOrContractNumber: String? = null,
+    var field1Name: String? = null,
+    var field1Type: String? = null,
+    var field1Value: String? = null,
+    var field2Name: String? = null,
+    var field2Type: String? = null,
+    var field2Value: String? = null,
+    var field3Name: String? = null,
+    var field3Type: String? = null,
+    var field3Value: String? = null,
+    // for ecrToken
+    var ecrToken: String? = null,
+    // for provider signature
+    val providerSignature: String? = null,
+    val documentIdentifier: String? = null,
+    val providerId: String? = null,
+    val signatureDatetime: String? = null,
+    val amountPayable: String? = null,
+    val netValue: String? = null,
+    val vat: String? = null,
+    val totalDocumentValue: String? = null,
+    val posId: String? = null,
+    val transactionDateTime: String? = null,
+    val uniqueEntryNumber: String? = null, // optional
+    val foodService: String? = null, // optional
+    val thirdPartyTaxId: String? = null, // optional
+    ) {
+    var reversalTransactionRRN= ""
+    var reversalTransactionId= ""
+}
+
+class PaymentBuilder {
+    var clientTransactionId: String? = null
+    var type: String? = null
+    var currency: String? = null
+    var price: String? = null
+    var tip: String? = null
+    var installments: Int? = null
+    var language: String? = null
+    var appLinkPackageName: String? = null
+    var serviceId: String? = null
+    var referenceId: String? = null
+    var allowPOSsiblePrint: Int? = null
+    var oneTap: Int = 1
+    var preAuthFrom: Long? = null
+    var preAuthTo: Long? = null
+    var roomOrContractNumber: String? = null
+    var field1Name: String? = null
+    var field1Type: String? = null
+    var field1Value: String? = null
+    var field2Name: String? = null
+    var field2Type: String? = null
+    var field2Value: String? = null
+    var field3Name: String? = null
+    var field3Type: String? = null
+    var field3Value: String? = null
+    var ecrToken: String? = null
+    var providerSignature: String? = null
+    var documentIdentifier: String? = null
+    var providerId: String? = null
+    var signatureDatetime: String? = null
+    var amountPayable: String? = null
+    var netValue: String? = null
+    var vat: String? = null
+    var totalDocumentValue: String? = null
+    var posId: String? = null
+    var transactionDateTime: String? = null
+    var uniqueEntryNumber: String? = null
+    var foodService: String? = null
+    var thirdPartyTaxId: String? = null
+
+    fun build(): Payment {
+        return Payment(
+            clientTransactionId,
+            type,
+            currency,
+            price,
+            tip,
+            installments,
+            language,
+            appLinkPackageName,
+            serviceId,
+            referenceId,
+            allowPOSsiblePrint,
+            oneTap,
+            preAuthFrom,
+            preAuthTo,
+            roomOrContractNumber,
+            field1Name,
+            field1Type,
+            field1Value,
+            field2Name,
+            field2Type,
+            field2Value,
+            field3Name,
+            field3Type,
+            field3Value,
+            ecrToken,
+            providerSignature,
+            documentIdentifier,
+            providerId,
+            signatureDatetime,
+            amountPayable,
+            netValue,
+            vat,
+            totalDocumentValue,
+            posId,
+            transactionDateTime,
+            uniqueEntryNumber,
+            foodService,
+            thirdPartyTaxId
+        )
+    }
+}
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <p>Method to build the getPreAuthData object:</p>
+
+    <pre><code onclick="openModal('PreAuthModal')">
+        private fun getPreAuthData(): String? {
+            val builder = PaymentBuilder()
+            builder.clientTransactionId = clientTransactionId
+            builder.type = "PRE_AUTH"
+            builder.currency = "EUR"
+            builder.price = binding.moneyEditText.text.toString()
+            builder.tip = tipAmount
+            builder.installments = 0
+            builder.language = "EL"
+            builder.appLinkPackageName = Constants.PRE_AUTH_CART_PACKAGE
+            builder.allowPOSsiblePrint = allowPOSsiblePrint
+            builder.oneTap = 1
+            builder.preAuthFrom = startDateTimestamp
+            builder.preAuthTo = endDateTimestamp
+            builder.serviceId = ""
+            builder.referenceId = ""
+    
+            if (binding.toggleForRentals.isChecked || binding.toggleForHotels.isChecked) {
+                builder.roomOrContractNumber = binding.enterRoomOrContractNumber.text.toString()
+            }
+    
+            return Gson().toJson(builder.build())
+        }
+    </code></pre>
+
+    __________________________________________________________________________________________________________
+
+    <h2>Pre Auth Completion Deeplink Request</h2>
+    <p>In order to perform a Pre Auth Completion Deeplink request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('PreAuthCompletionModal')">
+        val paymentIntent = Intent().apply {
+            component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+            putExtra("pre_auth_completion", getPreAuthCompletionData())
+
+            If the sale request includes a signature also add:
+            paymentIntent.putExtra("validationType", "signature")
+        
+            or if the sale request includes an ecr token, also add:
+            paymentIntent.putExtra("validationType", "ecrToken")
+        }
+</code></pre>
+
+    <div id="PreAuthCompletionModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('PreAuthCompletionModal')">×</span>
+            <h2>Reversal Object</h2>
+            <pre><code>
+            
+data class PreAuthCompletion (
+    var clientTransactionId: String?,
+    var posTransactionId: String?,
+    var appLinkPackageName: String?,
+    var language: String?,
+    var currency: String?,
+    var price: String? = null,
+    var oneTap: Int,
+    var allowPOSsiblePrint: Int?,
+    // for ecrToken
+    var ecrToken: String? = null,
+    // for provider signature
+    val providerSignature: String? = null,
+    val documentIdentifier: String? = null,
+    val providerId: String? = null,
+    val signatureDatetime: String? = null,
+    val amountPayable: String? = null,
+    val netValue: String? = null,
+    val vat: String? = null,
+    val totalDocumentValue: String? = null,
+    val posId: String? = null,
+    val transactionDateTime: String? = null,
+    val uniqueEntryNumber: String? = null, 
+    val foodService: String? = null,
+    val thirdPartyTaxId: String? = null,
+)
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <p>Method to build the getPreAuthCompletionData object:</p>
+
+    <pre><code onclick="openModal('PreAuthCompletionModal')">
+        private fun getPreAuthCompletionData(): String? {
+            val builder = PreAuthCompletionBuilder()
+            builder.clientTransactionId = clientTransactionId
+            builder.transactionId = binding.transactionIdET.text.toString()
+            builder.appLinkPackageName = Constants.PRE_AUTH_COMPLETION_CART_PACKAGE
+            builder.language = "EL"
+            builder.currency = "EUR"
+            builder.amount = binding.amountEditText.text.toString()
+            builder.oneTap = if (binding.switchOneTap.isChecked) 1 else 0
+            builder.allowPOSsiblePrint = allowPOSsiblePrint
+    
+            if (binding.toggleSignature.isChecked) {
+                builder.providerSignature = binding.enterSignatureEditText.text.toString()
+                builder.providerId = binding.enterProviderIdEditText.text.toString()
+                builder.signatureDatetime = binding.signatureDatetimeEditText.text.toString()
+                builder.documentIdentifier = binding.documentIdentifierEditText.text.toString()
+                builder.posId = binding.posIdEditText.text.toString()
+                builder.transactionDateTime = "010320024"
+                builder.amountPayable = binding.enterAmountPayableEditText.text.toString()
+                builder.totalDocumentValue = binding.totalDocumentValueEditText.text.toString()
+                builder.netValue = binding.enterNetAmountEditText.text.toString()
+                builder.vat = binding.vatEditText.text.toString()
+                builder.uniqueEntryNumber = binding.uniqueEntryNumberEditText.text.toString() ?: ""
+            }
+    
+            if (binding.toggleEcrToken.isChecked) {
+                builder.ecrToken = ecrToken
+            }
+    
+            return Gson().toJson(builder.build())
+        }
+    </code></pre>
+
+    __________________________________________________________________________________________________________
+
+
+    <h2>Get Transaction Details Request</h2>
+    <p>In order to perform a Get Transaction Details request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('GetTransactionDetailsModal')">
+        private fun requestTransactionDetails() {
+            val transactionDetailsJson = buildTransactionDetailsRequest()
+            logger.debug("transactionDetailsJson $transactionDetailsJson")
+    
+            val requestIntent = Intent(Constants.POSSIBLE_DEEPLINKREQUEST_ACTIVITY)
+            requestIntent.putExtra("getTransactionDetails", transactionDetailsJson)
+            launcher.launch(requestIntent)
+        }
+</code></pre>
+
+    <div id="GetTransactionDetailsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('GetTransactionDetailsModal')">×</span>
+            <h2>Get Transaction Details Object</h2>
+            <pre><code>
+
+data class GetTransactionDetails(
+    var clientTransactionId: String?,
+    var oldClientTransactionId: String?,
+    var appLinkPackageName: String?,
+    var language: String?,
+    var oneTap: Int?
+)                
+
+class GetTransactionDetailsBuilder {
+    var clientTransactionId: String? = null
+    var oldClientTransactionId: String? = null
+    var appLinkPackageName: String? = null
+    var language: String? = null
+    var oneTap: Int? = null
+
+    fun build(): GetTransactionDetails {
+        return GetTransactionDetails(
+            clientTransactionId,
+            oldClientTransactionId,
+            appLinkPackageName,
+            language,
+            oneTap)
+    }
+}
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <p>Method to build the GetTransactionDetails object:</p>
+
+    <pre><code onclick="openModal('GetTransactionDetailsModal')">
+        private fun buildTransactionDetailsRequest(): String? {
+            val builder = GetTransactionDetailsBuilder()
+            builder.clientTransactionId = binding.transactionIdET.text.toString()
+            builder.oldClientTransactionId = binding.transactionIdET.text.toString()
+            builder.appLinkPackageName = Constants.GET_TRANSACTION_DETAILS_CART_PACKAGE
+            builder.language = "EL"
+            builder.oneTap = 1
+    
+            return Gson().toJson(builder.build())
+        }
+    </code></pre>
+
+    __________________________________________________________________________________________________________
+
+
+
+    <h2>Cancel Request</h2>
+    <p>In order to perform a Cancel request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('cancelModal')">
+        private fun sendCancel() {
+            clientTransactionId = binding.clientIdEditText.text.toString()
+            
+            val cancelDataJson = getCancelData(binding.transactionIdET.text.toString())
+            logger.info("paymentDataJson $cancelDataJson")
+    
+            val cancelIntent = Intent().apply {
+                component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+                if (binding.toggleSignature.isChecked) {
+                    putExtra("validationType", "signature")
+                }
+                putExtra("cancel", cancelDataJson)
+            }
+    
+            launcher.launch(cancelIntent)
+        }
+</code></pre>
+
+    <div id="cancelModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cancelModal')">×</span>
+            <h2>Cancel Object</h2>
+            <pre><code>
+
+data class Cancel(
+    var clientTransactionId: String?,
+    var posTransactionId: String?,
+    var appLinkPackageName: String?,
+    var language: String?,
+    var allowPOSsiblePrint: Int?,
+    var oneTap: Int,
+    var price: String? = null,
+    val providerSignature: String? = null,
+    val documentIdentifier: String? = null,
+    val providerId: String? = null,
+    val signatureDatetime: String? = null,
+    val amountPayable: String? = null,
+    val netValue: String? = null,
+    val vat: String? = null,
+    val totalDocumentValue: String? = null,
+    val posId: String? = null,
+    val transactionDateTime: String? = null,
+    val uniqueEntryNumber: String? = null, // optional
+    val foodService: String? = null, // optional
+    val thirdPartyTaxId: String? = null, // optional
+)
+                              
+
+class CancelBuilder {
+    var clientTransactionId: String? = null
+    var transactionId: String? = null
+    var appLinkPackageName: String? = null
+    var language: String? = null
+    var allowPOSsiblePrint: Int? = null
+    var oneTap: Int = 1
+    var price: String? = null
+    var providerSignature: String? = null
+    var providerId: String? = null
+    var signatureDatetime: String? = null
+    var documentIdentifier: String? = null
+    var posId: String? = null
+    var transactionDateTime: String? = null
+    var amountPayable: String? = null
+    var totalDocumentValue: String? = null
+    var netValue: String? = null
+    var vat: String? = null
+    var uniqueEntryNumber: String? = null
+
+    fun build(): Cancel {
+        return Cancel(
+            clientTransactionId,
+            transactionId,
+            appLinkPackageName,
+            language,
+            allowPOSsiblePrint,
+            oneTap,
+            price,
+            providerSignature,
+            providerId,
+            signatureDatetime,
+            documentIdentifier,
+            posId,
+            transactionDateTime,
+            amountPayable,
+            totalDocumentValue,
+            netValue,
+            vat,
+            uniqueEntryNumber
+        )
+    }
+}
+
+class TransactionResult {
+    var transactionId: String? = null
+    var transactionDescriptionType: String? = null
+    var merchantId: String? = null
+    var customerId: String? = null
+    var terminalId: String? = null
+    var batchClosedDateMillis: Long = 0
+    var batchClosed = false
+    var appId: String? = null
+    var transactionDateInMillis: Long = 0
+    var transactionDate: Date? = null
+    var transactionType: String? = null
+    var cardType: String? = null
+    var panCard: String? = null
+    var settled = 0
+    var expiredDate: String? = null
+    var amountOriginal: String? = null
+    var amountTip: String? = null
+    var amountTotal: String? = null
+    var amountTotalString: String? = null
+    var rnn: String? = null
+    var version: String? = null
+    var appCode: String? = null
+    var bankId: String? = null
+    var receiptNumber: String? = null
+    var batchNumber: String? = null
+    var isTransactionVoided = false
+    var isTransactionRefunded = false
+    var isTransactionPreAuth = false
+    var isTransactionPreAuthCompletion = false
+    var isSignatureVerificationRequiredTransaction = 0
+    var finalCode: String? = null
+    var merchantName: String? = null
+    var merchantAddress: String? = null
+    var merchantLocation: String? = null
+    var deviceSn: String? = null
+    var merchantTelephone: String? = null
+    var applicationLabel: String? = null
+    var applicationPreferredName: String? = null
+    var applicationIdentifierTerminal: String? = null
+    var applicationVersionNumberICC: String? = null
+    var cardHolderName: String? = null
+    var signature: String? = null
+    var installments: String? = null
+    var insuranceId: String? = null
+    var verifiedbydevice = false
+    var rentRoomName: String? = null
+    var preAuthFromDateInMillis: Long = 0
+    var preAuthToDateInMillis: Long = 0
+    var preAuthSequenceNumber: String? = null
+    var preAuthApplicationCode: String? = null
+    var preAuthIsSettled = false
+    var dccCurrencyCode: String? = null
+    var dccRequestIdentifier: String? = null
+    var dccRetrievalReferenceNumber: String? = null
+    var dccExchangeRate: String? = null
+    var dccMarkup: String? = null
+    var dccEligibileIndicator: String? = null
+    var dccCardHolderDccAmount: String? = null
+    var alphabankBonusDoneWithoutRedemption = false
+    var alphabankBonusDoneWithRedemption = false
+    var alphabankBonusXlsTrxId: String? = null
+    var alphabankBonusPreBalance: Int = 0
+    var alphabankBonusPostBalance: Int = 0
+    var alphabankBonusAdjPurchaseAmount: Int = 0
+    var alphabankBonusAwardsValue: Int = 0
+    var alphabankBonusRedeemValue: Int = 0
+    var alphabankBonusRedeemPoints: Int = 0
+    var alphabankBonusSelectedOffersIdVersion: Map<String, String>? = null
+    var alphabankBonusSelectedTID: String? = null
+    var uniquePaymentId: String? = null
+    var transactionDatetime: String? = null
+}
+
+</code></pre>
+        </div>
+    </div>
+
+
+    <p>Method to build the Cancel object:</p>
+
+    <pre><code onclick="openModal('cancelModal')">
+        private fun getCancelData(transactionId: String): String? {
+            val builder = CancelBuilder()
+            builder.clientTransactionId = clientTransactionId
+            builder.transactionId = transactionId
+            builder.appLinkPackageName = Constants.CANCEL_CART_PACKAGE
+            builder.language = "EL"
+            builder.allowPOSsiblePrint = allowPOSsiblePrint
+            builder.oneTap = 1
+    
+            if (binding.toggleSignature.isChecked) {
+                builder.price = binding.moneyEditText.text.toString()
+                builder.providerSignature = binding.enterSignatureEditText.text.toString()
+                builder.providerId = binding.enterProviderIdEditText.text.toString()
+                builder.signatureDatetime = binding.signatureDatetimeEditText.text.toString()
+                builder.documentIdentifier = binding.documentIdentifierEditText.text.toString()
+                builder.posId = binding.posIdEditText.text.toString()
+                builder.transactionDateTime = "010320024"
+                builder.amountPayable = binding.enterAmountPayableEditText.text.toString()
+                builder.totalDocumentValue = binding.totalDocumentValueEditText.text.toString()
+                builder.netValue = binding.enterNetAmountEditText.text.toString()
+                builder.vat = binding.vatEditText.text.toString()
+                builder.uniqueEntryNumber = binding.uniqueEntryNumberEditText.text.toString() ?: ""
+            }
+    
+            return Gson().toJson(builder.build())
+        }
+    </code></pre>
+
+    __________________________________________________________________________________________________________
+
+
+    <h2>Close Batch Request</h2>
+    <p>In order to perform a Close Batch request, create an Intent object as follows:</p>
+
+    <pre><code onclick="openModal('closeBatchModal')">
+        private fun sendCloseBatch() {
+            val closeBatchIntent = Intent().apply {
+                component = applicationType.toComponentName()
+                putExtra("closeBatch", "")
+            }
+            launcher.launch(closeBatchIntent)
+        }
+</code></pre>
+
+
+    __________________________________________________________________________________________________________
+
+    <h2>Transaction Result</h2>
+    <p>In order to get the transaction data result from the intent you can use the following method:</p>
+
+    <pre><code>
+        fun handleResultData(data: Intent?): TransactionResult? {
+            if (data != null) {
+                val jsonData = data.getStringExtra("data")
+                return jsonData?.let { convertJsonToObject(it) }
+            }
+            return null
+        }
+
+        private fun convertJsonToObject(jsonData: String): TransactionResult? {
+            return try {
+                val gson = GsonBuilder().create()
+                val result: TransactionResult = gson.fromJson(jsonData, TransactionResult::class.java)
+    
+                // Post detailed result to LiveData
+                val detailedResult = "Transaction ID: ${result.transactionId}, Amount: ${result.amountTotalString}, Installments: ${result.installments}, Tip: ${result.amountTip}"
+                transactionResultLiveData.postValue(detailedResult)
+    
+                result
+            } catch (ex: Exception) {
+                logger.error("Could not parse data $ex")
+    
+                // Post the error to the LiveData
+                transactionResultLiveData.postValue("Error: Could not parse data")
+                null
+            }
+        }
+</code></pre>
+    <script>
+        function openModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            var modal = document.getElementById(modalId);
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                var modal = modals[i];
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
