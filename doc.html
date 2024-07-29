@@ -92,7 +92,7 @@
                 logger.info("paymentDataJson $paymentDataJson")
         
                 val paymentIntent = Intent()
-                paymentIntent.component = applicationType.toComponentName()
+                paymentIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
                 paymentIntent.putExtra("payment", paymentDataJson)
                 if (binding.toggleSignature.isChecked) {
                     paymentIntent.putExtra("validationType", "signature")
@@ -341,7 +341,7 @@ class TransactionResult {
         <pre><code onclick="openModal('ReversalModal')">
             private fun sendReversal() {
                 val reversalIntent = Intent()
-                reversalIntent.component = applicationType.toComponentName()
+                reversalIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
                 reversalIntent.putExtra(
                     "reversal",
                     getReversalData()
@@ -492,7 +492,7 @@ class TransactionResult {
                 val transactionType = arguments?.getString("applicationType")
         
                 val preAuthIntent = Intent()
-                preAuthIntent.component = transactionType?.toComponentName()
+                preAuthIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
                 preAuthIntent.putExtra("pre_auth", preAuthDataJson)
                 launcher.launch(preAuthIntent)
             }
@@ -750,18 +750,14 @@ class TransactionResult {
 
         <pre><code onclick="openModal('PreAuthCompletionModal')">
             private fun sendPreAuthCompletion() {
-                clientTransactionId = if (applicationType == "possible") {
-                    binding.clientIdEditText.text.toString()
-                } else {
-                    String.randomID()
-                }
+                clientTransactionId = binding.clientIdEditText.text.toString()
                 val preAuthCompletionDataJson = getPreAuthCompletionData()
                 logger.info("paymentDataJson $preAuthCompletionDataJson")
                 val transactionType = arguments?.getString("applicationType")
         
                 val paymentIntent = Intent().apply {
-                    component = transactionType?.toComponentName()
-                    putExtra("pre_auth_completion", preAuthCompletionDataJson)
+                    component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
+                    putExtra("pre_auth_completion", getPreAuthCompletionData())
                     if (binding.toggleSignature.isChecked) {
                         putExtra("validationType", "signature")
                     } else if (binding.toggleEcrToken.isChecked) {
@@ -965,7 +961,7 @@ class TransactionResult {
                 val transactionDetailsJson = buildTransactionDetailsRequest()
                 logger.debug("transactionDetailsJson $transactionDetailsJson")
         
-                val requestIntent = Intent(Constants.POSSIBLE_DEEPLINKREQUEST_ACTIVITY)
+                val requestIntent = Intent("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
                 requestIntent.putExtra("getTransactionDetails", transactionDetailsJson)
                 launcher.launch(requestIntent)
             }
