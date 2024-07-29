@@ -1932,7 +1932,7 @@ class TransactionResult {
     <div>
         <h2>Example code for a simple deeplink request (sale)</h2>
 
-        <pre><code>
+        <pre><code><p>
                 class MainActivity : AppCompatActivity() {
                     private lateinit var launcher: ActivityResultLauncher<Intent>
                 
@@ -1951,7 +1951,8 @@ class TransactionResult {
                                 handleActivityResult(result)
                             }
                 
-                        val button = findViewById<Button>(R.id.button)
+                        val button = findViewById<>(R.id.button)
+                            
                         button.setOnClickListener {
                             val paymentIntent = Intent()
                             paymentIntent.component = ComponentName("gr.cardlink.possible", "gr.cardlink.possible.DeeplinkRequestActivity")
@@ -1997,9 +1998,25 @@ class TransactionResult {
                         return Gson().toJson(builder.build())
                     }
                 }
-            </code></pre>
+            </p> </code></pre>
     </div>
 
+    __________________________________________________________________________________________________________
+
+    <!-- RESPONSES -->
+    <div>
+        <h2>Responses</h2>
+        <pre>
+            <code>
+         POSsible app returns 3 types of string extras: "data", "payment" and "description"
+
+            "data" -> Contains the TransactionResult object with data of the transaction.
+            "payment" -> Contains the payment result, such as "Approved"
+            "description" -> The error message
+        </code>
+        </pre>
+
+    </div>
     <script>
         function openModal(modalId) {
             var modal = document.getElementById(modalId);
