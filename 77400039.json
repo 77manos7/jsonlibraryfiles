@@ -93,7 +93,7 @@
 "fileLoggerMBCapacity": 50
 },
 "loyaltySettings": {
-"alphaBankBonusEnabled": false,
+"alphaBankBonusEnabled": true,
 "alphaBankBonusVTid": "",
 "alphaBankBonusVMid": "",
 "useAlphaBankBonusBRAmount": false,
